@@ -1,0 +1,29 @@
+{
+  "name": "debugcallback",
+  "version": "1.0.0",
+  "description": "Simple debugging of callbacks",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://erwinw@github.com/erwinw/debugcallback.git"
+  },
+  "keywords": [
+    "node",
+    "debug",
+    "callback"
+  ],
+  "author": "Erwin Wessels, Mindjumpers",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/erwinw/debugcallback/issues"
+  },
+  "devDependencies": {
+    "mocha": "1.17.x"
+  },
+  "dependencies": {
+    "winston": "~0.7.2"
+  }
+}
