@@ -87,20 +87,20 @@ function debugCallback( logFunc, debugLog, level, message, callback ){
 }
 
 
-//path.resolve(__dirname, '..', 'log/', 'debugSomething.log'),
 module.exports =  function(logOrLogPath){
-	var logFunc, debug = {};
+	var logFunc, debug = {}, logger;
 	if( isFunction(logOrLogPath) ) {
 		logFunc = logOrLogPath;
 	} else if( typeof logOrLogPath === 'string' ) {
-		logFunc = (new (winston.Logger)({
+		logger = new (winston.Logger)({
 			transports: [
 				new (winston.transports.File)({
 					filename: logOrLogPath,
 					level:'silly'
 				})
 			]
-		})).log;
+		});
+		logFunc = logger.log.bind(logger);
 	} else {
 		throw new Error('Log function or path to log file expected');
 	}
