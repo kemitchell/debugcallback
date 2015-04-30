@@ -16,7 +16,7 @@
     "callback"
   ],
   "author": "Erwin Wessels, Mindjumpers",
-  "license": "MIT License",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/erwinw/debugcallback/issues"
   },
